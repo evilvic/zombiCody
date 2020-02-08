@@ -10,6 +10,9 @@ const logger       = require('morgan');
 const path         = require('path');
 const passport     = require('./config/passport')
 const session      = require('express-session')
+const { 
+  isLoggedIn,
+  isActive } = require('./middlewares/index')
 
 mongoose
   .connect('mongodb://localhost/zombicody', {useNewUrlParser: true, useUnifiedTopology: true})
@@ -71,7 +74,7 @@ app.locals.title = 'zombiCody';
 const index = require('./routes/index');
 app.use('/', index);
 app.use('/auth', require('./routes/authRoutes'))
-app.use('/private', require('./routes/privateRoutes'))
+app.use('/private', isLoggedIn, isActive, require('./routes/privateRoutes'))
 
 
 module.exports = app;
