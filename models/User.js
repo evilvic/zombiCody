@@ -11,6 +11,10 @@ const userSchema = new Schema (
       type: Date,
       required: true
     },
+    photoUrl: {
+      type: String,
+      default: ''
+    }, 
     email: {
       type: String,
       required: true
