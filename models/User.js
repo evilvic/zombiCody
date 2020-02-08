@@ -23,10 +23,20 @@ const userSchema = new Schema (
       type: String,
       enum: ['student', 'parent', 'teacher'],
       default: 'student'
+    },
+    status: {
+      type: String,
+      enum: ['pending', 'active'],
+      default: 'pending'
+    },
+    confirmationCode: {
+      type: String,
+      unique:true
     }
   },
   {
-    timestamps: true
+    timestamps: true,
+    versionKey:false
   }
 )
 

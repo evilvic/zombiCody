@@ -7,7 +7,7 @@ const {
   signup,
   loginView,
   logout,
-  dashboardView
+  confirmationView
 } = require('../controllers/authControllers')
 
 router
@@ -22,5 +22,6 @@ router
     })
   )
   .get('/logout', logout)
+  .get('/confirmation', confirmationView)
 
 module.exports = router
