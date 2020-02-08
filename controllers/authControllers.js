@@ -62,3 +62,9 @@ exports.activateUser = async (req, res) => {
   const user = await User.findOneAndUpdate({ confirmationCode: token }, { status: 'active' }, { new: true })
   res.redirect('/auth/login')
 }
+
+exports.deleteAccount = async (req, res) => {
+  const { username } = req.user
+  await User.findOneAndDelete({ username })
+  res.redirect('/')
+}
