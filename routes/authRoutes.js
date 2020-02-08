@@ -7,7 +7,8 @@ const {
   signup,
   loginView,
   logout,
-  confirmationView
+  confirmationView,
+  activateUser
 } = require('../controllers/authControllers')
 
 router
@@ -17,11 +18,12 @@ router
   .post(
     '/login',
   passport.authenticate('local', {
-    succesRedirect: '/dashboard',
-    failerRedirect: '/login'
+    succesRedirect: '/private/dashboard',
+    failerRedirect: '/auth/login'
     })
   )
   .get('/logout', logout)
   .get('/confirmation', confirmationView)
+  .get('/activate/:token', activateUser)
 
 module.exports = router

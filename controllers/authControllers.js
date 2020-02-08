@@ -33,14 +33,14 @@ exports.signup = async (req, res) => {
     birthday,
     email,
     username,
+    confirmationCode: token
   }, password)
 
   confirmAccount(
     email,
-    `http://localhost:3000/auth/confirm/${token}`
+    `http://localhost:3000/auth/activate/${token}`
     )
-
-  res.redirect('/auth/confirmation')
+  res.render('auth/confirmation', newUser)
 
 }
 
@@ -50,11 +50,12 @@ exports.loginView = (req, res) => {
 
 exports.logout = (req, res) => {}
 
-exports.dashboardView = (req, res) => {
-  res.render('auth/dashboard')
+exports.confirmationView = (req, res) => {
+  res.render('auth/confirmation', { user: req.user })
 }
 
-exports.confirmationView = (req, res) => {
-  console.log(req.user)
-  res.render('auth/confirmation', { user: req.user })
+exports.activateUser = async (req, res) => {
+  const { token } = req.params
+  const user = await User.findOneAndUpdate({ confirmationCode: token }, { status: 'active' }, { new: true })
+  res.redirect('/auth/login')
 }
