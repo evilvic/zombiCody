@@ -18,8 +18,8 @@ router
   .post(
     '/login',
   passport.authenticate('local', {
-    succesRedirect: '/private/dashboard',
-    failerRedirect: '/auth/login'
+    successRedirect: '/private/dashboard',
+    failureRedirect: '/auth/login'
     })
   )
   .get('/logout', logout)

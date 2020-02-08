@@ -48,7 +48,10 @@ exports.loginView = (req, res) => {
   res.render('auth/login')
 }
 
-exports.logout = (req, res) => {}
+exports.logout = (req, res) => {
+  req.logout()
+  res.redirect('/')
+}
 
 exports.confirmationView = (req, res) => {
   res.render('auth/confirmation', { user: req.user })

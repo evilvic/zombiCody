@@ -1,9 +1,12 @@
 const { Router } = require('express')
 const router = Router()
 const {
-  dashboardView
+  dashboardView,
+  settingsView
 } = require('../controllers/privateControllers')
 
-router.get('/dashboard', dashboardView)
+router
+  .get('/dashboard', dashboardView)
+  .get('/settings', settingsView)
 
 module.exports = router
