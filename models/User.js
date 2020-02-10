@@ -13,7 +13,7 @@ const userSchema = new Schema (
     },
     photoUrl: {
       type: String,
-      default: ''
+      default: 'https://res.cloudinary.com/evilvic/image/upload/v1581298347/zombiCody/profile/zombi_qql1bo.png'
     }, 
     email: {
       type: String,
