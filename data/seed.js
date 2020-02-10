@@ -151,11 +151,10 @@ mongoose
     useCreateIndex: true
   })
   .then(async x => {
-    // console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
-    // Course.create(kangoroo).then(res => console.log('DB Ready...'))
-    // Question.create(kangorooQuestions).then(res => console.log('DB Ready...'))
-    const course = await Course.findById('5e41a6b81a284128683bb603')
-
+    console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+    //await Course.create(kangoroo).then(res => console.log('DB Ready...'))
+    //await Question.create(kangorooQuestions).then(res => console.log('DB Ready...'))
+    const course = await Course.findById('5e41c741a6381e73a4aae92e')
     const questions = await Question.find()
     
     let questionsIdArr = []
