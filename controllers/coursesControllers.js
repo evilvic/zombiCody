@@ -23,6 +23,24 @@ exports.questionView = async (req, res) => {
       return position
     }
   })
-  console.log(questions[position + 1])
-  res.render('courses/question', question)
+  const nextQuestion = questions[position + 1]._id
+  res.render('courses/question', {question, nextQuestion})
+}
+
+exports.validateQuestion = async (req, res) => {
+  const { response } = req.body
+  const { id } = req.params
+  const questions = await Question.find()
+  const question = await Question.findById(id)
+  let position
+  questions.forEach((element, index) => {
+    if (element._id.toString() == question._id.toString()) {
+      position = index
+      return position
+    }
+  })
+  const nextQuestion = questions[position + 1]._id
+  if (response === question.solution) {
+    res.render('courses/question', {question, message: 'Correcto!', nextQuestion})
+  }
 }

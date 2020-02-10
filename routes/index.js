@@ -4,7 +4,8 @@ const router  = express.Router();
 const {
   coursesView,
   courseView,
-  questionView
+  questionView,
+  validateQuestion
 } = require('../controllers/coursesControllers')
 
 /* GET home page */
@@ -15,5 +16,6 @@ router
   .get('/courses', coursesView)
   .get('/courses/:id', courseView)
   .get('/question/:id', questionView)
+  .post('/validate/:id', validateQuestion)
 
 module.exports = router;
