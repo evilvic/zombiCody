@@ -1,2 +1,137 @@
-<h1>Hola</h1>
-<a href="{{endpoint}}">Click me</a>
+<style>
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 216);
+    height: 20px;
+    width: 175px;
+}
+
+#logo img {
+  height: 40px;
+  }
+
+#logo p {
+  padding-left: 5px;
+  font-family: 'Concert One', cursive;
+  font-size: 2rem;
+  color: rgb(160, 130, 213);
+  }
+
+
+.email-template {
+  margin-inline-start: 10vw;
+  margin-inline-end: 10vw;
+  margin-block-start: 10vh;
+  margin-block-end: 10vh;
+}
+
+.title {
+  background-color: rgb(255, 255, 216);
+  width: 20vw;
+  color: rgb(160, 130, 213);
+}
+
+.title > h1 {
+  padding-block-start: 1vh;
+  padding-block-end: 1vh;
+  padding-inline-start: 1vw;
+  padding-inline-end: 1vw;
+}
+
+.callto-action {
+  padding-inline-start: 1vw;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.email-intro {
+  margin-block-start: 3vh;
+  padding-inline-start: 1vw;
+  width: 65vw;
+}
+
+.zombicody {
+  margin-block-start: 3vh;
+  padding-inline-start: 1vw;
+  width: 65vw;
+}
+
+.knowmore {
+  margin-block-start: 3vh;
+  padding-inline-start: 1vw;
+  width: 65vw;
+}
+
+.activate {
+  margin-block-start: 1vh;
+  padding-inline-start: 1vw;
+  width: 65vw;
+}
+
+.knowbutton {
+  background-color: rgb(150, 255, 226);
+  border-color: rgb(150, 255, 226);
+  height: 3vh;
+  margin-inline-start: 25vw;
+}
+
+.knowbutton > a {
+  text-decoration: none;
+  color: rgb(160, 130, 213);
+  font-size: 1.5em;
+  padding-inline-start: 1vw;
+  padding-inline-end: 1vw;
+}
+
+.activatebutton {
+  background-color: rgb(150, 255, 226);
+  border-color: rgb(150, 255, 226);
+  height: 3vh;
+  margin-inline-start: 25vw;
+}
+
+.activatebutton > a {
+  text-decoration: none;
+  color: rgb(160, 130, 213);
+  font-size: 1.5em;
+  padding-inline-start: 1vw;
+  padding-inline-end: 1vw;
+}
+</style>
+
+<section class="email-template">
+  <div id="logo">
+    <img src="/images/identity/logo.png" alt="zombiCody">
+    <p>{{title}}</p>
+  </div>  
+  <div class="callto-action">
+    <p>Aprende haciendo</p>
+  </div>
+  <div class="email-intro">
+    <p>Hola!</p>
+    <p>Hemos recibido una solicitud para activar una cuenta en nuestro sitio con este correo electrónico, es por ello que nos ponemos en contacto contigo
+      para realizar la confirmación de cuenta.
+    </p>
+  <div class="activate">
+    <p>Haz click en el siguiente botón para activar cuenta:</p>
+    <button class="activatebutton"><a href="{{endpoint}}">Activar cuenta</a></button>
+  </div>
+  <div class="zombicody">
+    <p>Que es zombiCody?</p>
+    <p>zombiCody es una plataforma en línea en donde, a través de cursos interactivos y entretenidos, enseñamos a las siguientes
+      generaciones la aplicación de lógica, solución de problemas y lo más importante, principios básicos de la programación. 
+    </p>
+    <p>Como surge?</p>
+    <p>Quienes estamos detrás de zombiCody somos personas apasionadas por la programación y la enseñanza, por lo que es nuestro deseo compartir estos conocimientos
+      y hacerlo lo más accesible posible para todos. Creemos firmemente que hoy en día la necesidad de aprender a programar es tanta como lo era y es el aprender inglés, por lo
+      que es una habilidad fundamental a aprender.</p>
+  </div>
+  <div class="knowmore">
+    <p>Si deseas conocer nuestra plataforma antes de confirmar la cuenta, puedes dar click en el botón de aquí abajo. En el sitio
+      podrás encontrar toda la información en torno a cursos, políticas de privacidad y demás.
+    </p>
+    <button class="knowbutton"><a href="http://localhost:3000">Conocenos!</a></button>
+  </div> 
+</section>
