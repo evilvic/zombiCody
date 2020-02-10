@@ -1,4 +1,4 @@
-[
+const kangorooQuestions = [
   {
       content: 'Un perro, un gato y tres gallinas ¿Cuántas patas tienen en total?',
       image_URL: 'https://res.cloudinary.com/evilvic/image/upload/v1581290155/zombiCody/images/00001_dtge5v.png',
@@ -132,3 +132,45 @@
       feedback: 'Como la altura del rectángulo es de 28 cm, la altura de los triángulos es de 14 cm. Horizontalmente los triángulos también abarcan 28 cm del total de 30 cm que tiene de base el rectángulo, así que la base de los triángulos mide 2 cm. Entones cada dos triángulos forman un rectángulo de 2 x 14. El área es 2 x 2 x 14 = 56.'
   }
 ]
+
+const mongoose = require('mongoose')
+const Course = require('../models/Course')
+const Question = require('../models/Question')
+
+
+const kangoroo = {
+    title: 'Kangoroo',
+    image_URL: '',
+    description: 'Math for fun and glory'
+}
+
+mongoose
+  .connect('mongodb://localhost/zombicody', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+  })
+  .then(async x => {
+    // console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+    // Course.create(kangoroo).then(res => console.log('DB Ready...'))
+    // Question.create(kangorooQuestions).then(res => console.log('DB Ready...'))
+    const course = await Course.findById('5e41a6b81a284128683bb603')
+
+    const questions = await Question.find()
+    
+    let questionsIdArr = []
+    questions.forEach(question => {
+        questionsIdArr.push(question._id)
+    })
+
+    console.log(questionsIdArr)
+
+    course.questions = questionsIdArr
+
+    course.save()
+
+
+  })
+  .catch(err => {
+    console.error('Error connecting to mongo', err)
+  });
