@@ -1,8 +1,78 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+@import url("https://fonts.googleapis.com/css?family=Concert+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bitter&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bitter', serif; }
 
 a {
-  color: #00B7FF; }
+  text-decoration: none; }
+
+#logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffd8;
+  height: 20px;
+  width: 175px; }
+  #logo img {
+    height: 40px; }
+  #logo p {
+    padding-left: 5px;
+    font-family: 'Concert One', cursive;
+    font-size: 2rem;
+    color: #a98bd5; }
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 60px;
+  padding: 0 5vw;
+  border-bottom: 3px solid #fafafa; }
+  nav button {
+    border: 0;
+    background-color: white; }
+  nav i {
+    font-size: 3rem;
+    color: #a98bd5; }
+  nav #menu {
+    position: absolute;
+    top: 60px;
+    left: -5vw;
+    width: 105vw;
+    height: 300px;
+    background-color: #96ffe2;
+    border-bottom: 3px solid #fafafa;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+    nav #menu .link {
+      width: 250px;
+      height: 50px;
+      margin-left: 5vw;
+      text-align: center;
+      padding-top: 5px;
+      font-size: 3rem;
+      background-color: #ffffd8;
+      font-family: 'Concert One', cursive;
+      color: #a98bd5; }
+
+header {
+  width: 100vw;
+  height: 700px;
+  background-image: url("../assets/background.png");
+  background-position: center;
+  background-repeat: repeat; }
 
 /*# sourceMappingURL=style.css.map */
