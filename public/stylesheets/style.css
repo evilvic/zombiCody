@@ -114,7 +114,8 @@ header {
       border: 2px solid #ffcfe1;
       border-radius: 5px;
       font-size: 1.5rem;
-      text-align: center; }
+      text-align: center;
+      background-color: white; }
     #signup div label[for="email"],
     #signup div input[name="email"],
     #signup div label[for="username"],
@@ -123,7 +124,19 @@ header {
     #signup div input[name="password"] {
       display: none; }
   #signup input[type="submit"] {
-    display: none; }
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    background-color: #96ffe2;
+    color: #a98bd5;
+    width: 70vw;
+    height: 50px;
+    border: 3px solid #76f3ff;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin-top: 10px; }
 
 #validation {
   background-color: #96ffe2;

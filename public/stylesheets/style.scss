@@ -123,6 +123,7 @@ header {
       border-radius: 5px;
       font-size: 1.5rem;
       text-align: center;
+      background-color: white;
     }
     label[for="email"],
     input[name="email"],
@@ -134,7 +135,18 @@ header {
       display: none;
     }
   }
-  input[type="submit"] { display: none; }
+  input[type="submit"] { 
+    @include flex(flex, row, center, center);
+    display: none;
+    background-color: $green;
+    color: $purple;
+    width: 70vw;
+    height: 50px;
+    border: 3px solid $blue;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
 }
 
 #validation {
