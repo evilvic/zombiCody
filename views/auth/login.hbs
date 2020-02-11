@@ -1,8 +1,16 @@
-<h1>Log in</h1>
-<form action="/auth/login" method="POST">
-  <label for="username">Usuario:</label>
-  <input type="text" name="username" placeholder="zombiCody" required>
-  <label for="password">Contraseña:</label>
-  <input type="password" name="password" required>
-  <input type="submit">
-</form>
+<section class="container-login">
+  <form id="login" action="/auth/login" method="POST">
+    <h1>Es bueno verte de nuevo!</h1>
+    <div>
+      <label for="username">Usuario:</label>
+      <input type="text" name="username" placeholder="zombiCody" required>
+    </div>
+    <div>
+      <label for="password">Contraseña:</label>
+      <input type="password" name="password" required>
+    </div>
+    <input type="submit" value="Inicia sesión">
+  </form>
+</section>
+
+
