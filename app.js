@@ -80,7 +80,7 @@ const index = require('./routes/index');
 app.use('/', index);
 app.use('/auth', require('./routes/authRoutes'))
 app.use('/private', isLoggedIn, isActive, require('./routes/privateRoutes'))
-
+app.use('/info', require('./routes/infoRoutes'))
 
 
 module.exports = app;
