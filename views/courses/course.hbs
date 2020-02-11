@@ -1,5 +1,12 @@
 <h1>{{title}}</h1>
 <h2>{{description}}</h2>
 {{#each questions as |question|}}
-<a href="/question/{{question}}">Question</a>
+<a href="/question/{{question}}">
+  <div class="circle"></div>
+  <p>Question {{@index}}</p>
+</a>
 {{/each}}
+
+<script>
+
+</script>

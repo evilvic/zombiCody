@@ -1,0 +1,25 @@
+footer {
+  width: 100vw;
+  background-color: $purple;
+  border-top: 3px solid $pink;
+  @include flex(flex, column, center, center);
+  div {
+    @include flex(flex, column, center, center);
+    img {
+      width: 100px;
+      margin-top: 10px;
+    }
+    a {
+      color: white;
+      padding: 5px;
+      font-size: 1.2rem;
+    }
+    p {
+      color: white;
+      padding: 10px;
+      text-align: center;
+      margin: 20px 0;
+      font-size: 1.2rem;
+    }
+  }
+}
