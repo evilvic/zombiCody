@@ -86,7 +86,7 @@ header {
   align-items: center; }
   header div {
     width: 90%;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 216, 0.7);
     padding: 10%; }
     header div h2 {
       font-size: 3.5rem;
@@ -229,7 +229,7 @@ section {
 .confirmation-text h1 {
   font-size: 2.5rem;
   text-align: center;
-  margin-block-start: 2vh;
+  margin-block-start: 1vh;
   margin-inline-start: 2vw;
   margin-inline-end: 2vw; }
 
