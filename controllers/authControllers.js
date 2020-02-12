@@ -38,7 +38,7 @@ exports.signup = async (req, res) => {
 
   confirmAccount(
     email,
-    `http://localhost:3000/auth/activate/${token}`
+    `https://zombicody.herokuapp.com/auth/activate/${token}`
     )
   res.render('auth/confirmation', newUser)
 
