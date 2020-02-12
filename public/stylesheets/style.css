@@ -246,6 +246,42 @@ footer {
   color: #a98bd5;
   font-size: 2rem; }
 
+#all-courses {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  width: 100vw; }
+  #all-courses h1 {
+    font-size: 4rem;
+    padding: 10px 0;
+    margin-bottom: 10px; }
+  #all-courses .course-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    background-color: #ffcfe1;
+    padding: 15px; }
+    #all-courses .course-card div {
+      margin-right: 10px; }
+      #all-courses .course-card div h2 {
+        font-size: 2.5rem;
+        text-align: left;
+        margin: 0; }
+      #all-courses .course-card div p {
+        font-size: 1.5rem;
+        text-align: left;
+        padding: 5px 0;
+        margin: 3px 0; }
+        #all-courses .course-card div p.course-code {
+          background-color: #ffffd8;
+          text-align: center;
+          width: 150px; }
+  #all-courses img {
+    width: 90px; }
+
 .container-column {
   display: flex;
   flex-direction: column;
@@ -253,6 +289,10 @@ footer {
   align-items: center;
   width: 100vw;
   height: 90vh; }
+  .container-column p {
+    font-size: 1.5rem;
+    color: #a98bd5;
+    padding: 10px; }
 
 #signup {
   display: flex;
@@ -515,11 +555,54 @@ h1 {
   .delete form input {
     border: solid #201c1c; }
 
-.circle {
+#header-course {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 300px;
+  background-color: #76f3ff;
+  padding: 30px; }
+  #header-course div {
+    margin-right: 10px; }
+    #header-course div h2 {
+      font-size: 2.5rem;
+      text-align: left;
+      margin: 0; }
+    #header-course div p {
+      font-size: 1.5rem;
+      text-align: left;
+      padding: 5px 0;
+      margin: 3px 0; }
+      #header-course div p.course-code {
+        background-color: #ffffd8;
+        text-align: center;
+        width: 150px; }
+  #header-course img {
+    width: 90px; }
+
+#questions .circle {
   background-color: #fafafa;
   border: 3px solid #a98bd5;
   border-radius: 50%;
   width: 30px;
   height: 30px; }
+
+#questions .horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 150px; }
+  #questions .horizontal p {
+    font-size: 1.5rem; }
+
+#question-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center; }
 
 /*# sourceMappingURL=style.css.map */

@@ -36,6 +36,8 @@ a {
 @import './privacy';
 @import './terms';
 
+@import './courses';
+
 @import './signup';
 @import './confirmation';
 
@@ -44,6 +46,7 @@ a {
 @import './settings';
 
 @import './course';
+@import './question';
 
 @media (max-width: 767px) {}
 @media (min-width: 768px) and (max-width: 1023) {}

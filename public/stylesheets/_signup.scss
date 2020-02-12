@@ -2,6 +2,11 @@
   @include flex(flex, column, center, center);
   width: 100vw;
   height: 90vh;
+  p {
+    font-size: 1.5rem;
+    color: $purple;
+    padding: 10px;
+  }
 }
 
 #signup {

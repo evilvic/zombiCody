@@ -1,7 +1,11 @@
-<h1>Question</h1>
+<section id="question-layout">
+
 <h2>{{question.content}}</h2>
+
 <img src="{{question.image_URL}}" alt="image">
+
 <form action="/validate/{{question._id}}" method="POST">
+
   <input type="radio" name="response" value="option1">
   <label>{{question.option1}}</label>
   <input type="radio" name="response" value="option2">
@@ -13,7 +17,12 @@
   <input type="radio" name="response" value="option5">
   <label>{{question.option5}}</label>
   <input type="submit">
+
 </form>
-<h1>{{message}}</h1>
-<button><a href="/courses">Regresa al curso.</a></button>
-<a href="/question/{{nextQuestion._id}}">Next</a>
+
+<p>{{message}}</p>
+
+<a href="/courses">Regresar al curso</a>
+<a href="/question/{{nextQuestion._id}}">Siguiente pregunta</a>
+
+</section>
