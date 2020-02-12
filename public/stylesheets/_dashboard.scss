@@ -25,6 +25,7 @@
     font-size: 2.5rem;
     margin-inline-start: 5vw;
     padding-block-start: 2.5vh;
+    color: $gray;
   }
 }
 
@@ -33,7 +34,7 @@
   margin-inline-start: 5vw;
   p, ul > li {
     font-size: 2rem;
-    color: $purple;
+    color: $gray;
   }
   p {
     padding-block-end: 1vh;
@@ -51,7 +52,7 @@
     width: 30vw;
   }
   p, a {
-    color: $purple;
+    color: $gray;
     font-size: 2rem;
   }
   a {

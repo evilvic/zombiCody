@@ -1,0 +1,25 @@
+.about {
+  margin-inline-start: 5vw;
+  margin-inline-end: 5vw;
+  h1 {
+    margin-inline-start: 0;
+    margin-block-end: 1.5vh;
+  }
+  h2, p {
+    font-size: 2rem;
+    color: black;
+  }
+  h2 {
+    margin-block-start: 1.5vh;
+    margin-block-end: 2vh;
+  }
+}
+
+.about-a {
+  display: flex;
+  justify-content: flex-end;
+  margin-inline-end: 6vw;
+  margin-block-end: 5vh;
+  color: $purple;
+  font-size: 2rem;
+}

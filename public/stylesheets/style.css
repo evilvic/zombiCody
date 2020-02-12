@@ -164,6 +164,88 @@ footer {
       margin: 20px 0;
       font-size: 1.2rem; }
 
+.about {
+  margin-inline-start: 5vw;
+  margin-inline-end: 5vw; }
+  .about h1 {
+    margin-inline-start: 0;
+    margin-block-end: 1.5vh; }
+  .about h2, .about p {
+    font-size: 2rem;
+    color: black; }
+  .about h2 {
+    margin-block-start: 1.5vh;
+    margin-block-end: 2vh; }
+
+.about-a {
+  display: flex;
+  justify-content: flex-end;
+  margin-inline-end: 6vw;
+  margin-block-end: 5vh;
+  color: #a98bd5;
+  font-size: 2rem; }
+
+.privacy {
+  margin-inline-start: 5vw;
+  margin-inline-end: 5vw; }
+  .privacy h1 {
+    margin-inline-start: 0;
+    margin-block-end: 1.5vh; }
+  .privacy h2 {
+    font-size: 3rem;
+    color: black;
+    margin-block-start: 1.5vh;
+    margin-block-end: 2vh; }
+  .privacy h3 {
+    color: black;
+    font-size: 2rem;
+    margin-block-start: 2vh;
+    margin-block-end: 2vh; }
+  .privacy p {
+    font-size: 2rem;
+    color: black; }
+
+.privacy-a {
+  display: flex;
+  justify-content: flex-end;
+  margin-inline-end: 6vw;
+  margin-block-end: 5vh;
+  color: #a98bd5;
+  font-size: 2rem; }
+
+.terms {
+  margin-inline-start: 5vw;
+  margin-inline-end: 5vw; }
+  .terms h1 {
+    margin-inline-start: 0;
+    margin-block-end: 1.5vh; }
+  .terms h2 {
+    font-size: 3rem;
+    color: black;
+    margin-block-start: 1.5vh;
+    margin-block-end: 2vh; }
+  .terms h3 {
+    color: black;
+    font-size: 2rem;
+    margin-block-start: 2vh;
+    margin-block-end: 2vh; }
+  .terms p {
+    font-size: 2rem;
+    color: black; }
+  .terms ol > li {
+    font-size: 2rem;
+    color: black;
+    margin-inline-start: 1.5vw;
+    margin-block-end: 1vh; }
+
+.terms-a {
+  display: flex;
+  justify-content: flex-end;
+  margin-inline-end: 6vw;
+  margin-block-end: 5vh;
+  color: #a98bd5;
+  font-size: 2rem; }
+
 .container-column {
   display: flex;
   flex-direction: column;
@@ -339,14 +421,15 @@ footer {
   .dashboard-welcome p {
     font-size: 2.5rem;
     margin-inline-start: 5vw;
-    padding-block-start: 2.5vh; }
+    padding-block-start: 2.5vh;
+    color: #646464; }
 
 .dashboard-info {
   margin-block-start: 1vh;
   margin-inline-start: 5vw; }
   .dashboard-info p, .dashboard-info ul > li {
     font-size: 2rem;
-    color: #a98bd5; }
+    color: #646464; }
   .dashboard-info p {
     padding-block-end: 1vh; }
   .dashboard-info ul {
@@ -362,7 +445,7 @@ footer {
   .dashboard-image img {
     width: 30vw; }
   .dashboard-image p, .dashboard-image a {
-    color: #a98bd5;
+    color: #646464;
     font-size: 2rem; }
   .dashboard-image a {
     margin-inline-start: 1vh;
@@ -386,7 +469,8 @@ h1 {
   color: #a98bd5;
   margin-inline-start: 5vw;
   margin-block-start: 2vh;
-  font-size: 2rem; }
+  font-size: 2rem;
+  color: #646464; }
 
 .avatar form {
   margin-block-end: 3vh;

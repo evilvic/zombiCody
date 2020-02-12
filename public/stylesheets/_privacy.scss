@@ -1,0 +1,33 @@
+.privacy {
+  margin-inline-start: 5vw;
+  margin-inline-end: 5vw;
+  h1 {
+    margin-inline-start: 0;
+    margin-block-end: 1.5vh;
+  }
+  h2 {
+    font-size: 3rem;
+    color: black;
+    margin-block-start: 1.5vh;
+    margin-block-end: 2vh;
+  }
+  h3 {
+    color: black;
+    font-size: 2rem;
+    margin-block-start: 2vh;
+    margin-block-end: 2vh;
+  }
+  p {
+    font-size: 2rem;
+    color: black;
+  }
+}
+
+.privacy-a {
+  display: flex;
+  justify-content: flex-end;
+  margin-inline-end: 6vw;
+  margin-block-end: 5vh;
+  color: $purple;
+  font-size: 2rem;
+}
