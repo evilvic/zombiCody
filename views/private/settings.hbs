@@ -1,32 +1,36 @@
 <h1>Configuración</h1>
-<form action="/private/update" method="POST">
-  <p>Selecto your profile picture:</p>
-  <div>
-    <img src="/images/profile/zombi.png" alt="zombi">
-    <input type="radio" name="profilepic" value="zombi">
-  </div>
-  <div>
-    <img src="/images/profile/boy.png" alt="boy">
-    <input type="radio" name="profilepic" value="boy">
-  </div>
+<div class="avatar">
+  <p>Selecciona tu avatar de perfil:</p>
+  <form class="avatar-form" action="/private/update" method="POST">
     <div>
-    <img src="/images/profile/girl.png" alt="girl">
-    <input type="radio" name="profilepic" value="girl">
-  </div>
+      <img src="/images/profile/zombi.png" alt="zombi">
+      <input type="radio" name="profilepic" value="zombi">
+    </div>
     <div>
-    <img src="/images/profile/brain.png" alt="brain">
-    <input type="radio" name="profilepic" value="brain">
-  </div>
-  <div>
-    <img src="/images/profile/hand.png" alt="hand">
-    <input type="radio" name="profilepic" value="hand">
-  </div>
-  <input type="submit" value="submit">
-</form>
-<form action="/auth/delete" method="POST">
-  <h2>Borrar cuenta</h2>
-  <label for="username">Nombre de usuario:</label>
-  <input type="text" name="username" placeholder="zombiCody" required>
-  <h2>Al presionar el botón confirmar, tu cuenta quedará eliminada. Esta acción no puede ser deshecha.</h2>
-  <input type="submit">
-</form>
+      <img src="/images/profile/boy.png" alt="boy">
+      <input type="radio" name="profilepic" value="boy">
+    </div>
+    <div>
+      <img src="/images/profile/girl.png" alt="girl">
+      <input type="radio" name="profilepic" value="girl">
+    </div>
+    <div>
+      <img src="/images/profile/brain.png" alt="brain">
+      <input type="radio" name="profilepic" value="brain">
+    </div>
+    <div>
+      <img src="/images/profile/hand.png" alt="hand">
+      <input type="radio" name="profilepic" value="hand">
+    </div>
+    <input type="submit" value="submit">
+  </form>
+</div>
+<div class="delete">
+  <form action="/auth/delete" method="POST">
+    <h2>Borrar cuenta</h2>
+    <label for="username">Nombre de usuario:</label>
+    <input type="text" name="username" placeholder="zombiCody" required>
+    <h2>Al presionar el botón confirmar, tu cuenta quedará eliminada. Esta acción no puede ser deshecha.</h2>
+    <input type="submit">
+  </form>
+</div>

@@ -1,0 +1,70 @@
+h1 {
+  margin-inline-start: 5vw;
+  margin-block-start: 2vh;
+  color: $purple;
+}
+
+.avatar {
+  p {
+    color: $purple;
+    margin-inline-start: 5vw;
+    margin-block-start: 2vh;
+    font-size: 2rem;
+  }
+  form {
+    //margin-block-start: 3vh;
+    margin-block-end: 3vh;
+    margin-inline-start: 5vw;
+    margin-inline-end: 5vw; 
+  }
+}
+
+.avatar-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  img {
+    display: flex;
+    flex-direction: column;
+    width: 18vw;
+  }
+  div {
+    margin-block-start: 4vh;
+    margin-inline-end: 5vw;
+    border: solid $purple;
+    background-image: url('/images/identity/background2.png');
+  }
+  input[type="radio"] {
+    margin-inline-start: 9vw;
+    margin-block-end: 5vh;
+    font-size: 30px;
+  }
+}
+
+.delete {
+  display: flex;
+  justify-content: center;
+  border: solid rgb(167, 53, 53);
+  background-image: url('/images/identity/background.png');
+  width: 80vw;
+  margin-inline-start: 5vw;
+  margin-block-end: 5vh;
+  background-color: rgba($color: red, $alpha: 0.1)
+}
+
+.delete form {
+  color: black;
+  font-size: 2rem;
+  h2 {
+    margin-block-end: 2vh;
+  }
+  label {
+    font-size: 1.5rem;
+  }
+  input {
+    border: solid rgb(32, 28, 28);
+  }
+}
+
+
+

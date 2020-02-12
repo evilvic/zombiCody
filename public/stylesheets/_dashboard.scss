@@ -1,0 +1,72 @@
+.dashboard-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  h1 {
+    margin-inline-start: 5vw;
+    margin-block-start: 2vh;
+    color: $purple;
+  }
+  a {
+    margin-inline-end: 5vw;
+    margin-block-start: 2vh;
+    color: $purple;
+    font-size: 1.5rem;
+  }
+}
+
+
+.dashboard-welcome {
+  margin-block-start: 2vh;
+  color: $purple;
+  width: 100vw;
+  height: 10vh;
+  p {
+    font-size: 2.5rem;
+    margin-inline-start: 5vw;
+    padding-block-start: 2.5vh;
+  }
+}
+
+.dashboard-info {
+  margin-block-start: 1vh;
+  margin-inline-start: 5vw;
+  p, ul > li {
+    font-size: 2rem;
+    color: $purple;
+  }
+  p {
+    padding-block-end: 1vh;
+  }
+  ul {
+    margin-block-start: 1vh;
+    padding-inline-start: 5vw;
+    padding-block-end: 1.5vh;
+  }
+}
+
+.dashboard-image {
+  @include flex(flex, column, center, center);
+  img {
+    width: 30vw;
+  }
+  p, a {
+    color: $purple;
+    font-size: 2rem;
+  }
+  a {
+    margin-inline-start: 1vh;
+    margin-block-start: 1vh;
+  }
+}
+
+.achievements {
+  width: 100vw;
+  height: 50vh;
+  background-image: url('../images/identity/background2.png');
+  background-position: center;
+  background-repeat: repeat;
+  p {
+    font-size: 5rem;
+  }
+}

@@ -1,24 +1,27 @@
 <div>
-  <div>
+  <div class="dashboard-title">
     <h1>Tablero</h1>
     <a href="/auth/logout">Cerrar sesión</a>
   </div>
-  <div>
+  <div class="dashboard-welcome">
     <p>Hola {{ this.username }}!</p>
   </div>
-  <div>
+  <div class="dashboard-info">
     <p>Este es tú tablero y aquí puedes encontrar:</p>
     <ul>
       <li>Avatar de perfil</li>
       <li>Cursos completados</li>
       <li>Logros conseguidos</li>
     </ul>
-  </div>
-  <div>
     <p>En configuración puedes cambiar el avatar de tu perfil y borrar tu cuenta si así lo deseas.</p>
-    <p>Para cerrar tu sesión, solo da click en el "Cerrar sesión", lo que se encuentra en la esquina superior derecha.</p>
+    <p>Para cerrar tu sesión, solo da click en "Cerrar sesión", lo que se encuentra en la esquina superior derecha.</p>
   </div>
-  <img src="{{this.photoUrl}}" alt="">
-  <p>@{{ this.username }}</p>  
-  <a href="/private/settings">Configuración</a>
+  <div class="dashboard-image">
+    <img src="{{this.photoUrl}}" alt="">
+    <p>@{{ this.username }}</p>  
+    <a href="/private/settings">Configuración</a>
+  </div>
+  <div class="achievements">
+    <p>Logros</p>
+  </div>
 </div>
