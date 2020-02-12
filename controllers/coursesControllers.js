@@ -1,5 +1,6 @@
 const Course = require('../models/Course')
 const Question = require('../models/Question')
+const User = require('../models/User')
 
 exports.coursesView = async (req, res) => {
   const allCourses = await Course.find()
@@ -40,7 +41,15 @@ exports.validateQuestion = async (req, res) => {
     }
   })
   const nextQuestion = questions[position + 1]._id
+
   if (response === question.solution) {
-    res.render('courses/question', {question, message: 'Correcto!', nextQuestion})
+    const user = await User.findById(req.user._id)
+    if (user.correctQuestions.indexOf(question._id) == -1) {
+      user.correctQuestions.push(question._id)
+      user.save()
+    }
+    res.render('courses/question', {question, message: '¡Correcto!', nextQuestion})
+  } else {
+    res.render('courses/question', {question, message: '¡Intenta de nuevo!', nextQuestion})
   }
 }
