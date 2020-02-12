@@ -1,0 +1,44 @@
+<h1>Aquí van las super questions</h1>
+<form action="/course"></form>
+
+<h1>{{_id}}</h1>
+<h1>{{title}}</h1>
+<h1>{{description}}</h1>
+<img src="{{image_URL}}" alt="">
+
+<form action="/create/course/{{_id}}" method="POST" enctype="multipart/form-data">
+  <label>Pregunta</label>
+  <input type="text" name="content">
+  <br>
+  <label>Imagen</label>
+  <input type="file" name="image">
+  <br>
+  <label>Option 1</label>
+  <input type="text" name="option1">
+  <br>
+  <label>Option 2</label>
+  <input type="text" name="option2">
+  <br>
+  <label>Option 3</label>
+  <input type="text" name="option3">
+  <br>
+  <label>Option 4</label>
+  <input type="text" name="option4">
+  <br>
+  <label>Option 5</label>
+  <input type="text" name="option5">
+  <br>
+  <label>Respuesta correcta</label>
+  <select name="solution">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+    <option value="option4">Option 4</option>
+    <option value="option5">Option 5</option>
+  </select>
+  <br>
+  <label>Retroalimentación</label>
+  <input type="text" name="feedback">
+  <br>
+  <input type="submit">
+</form>
