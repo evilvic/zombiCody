@@ -10,7 +10,15 @@ const questionSchema = new Schema (
     option4: String,
     option5: String,
     solution: String,
-    feedback: String
+    feedback: String,
+    correct: {
+      type: Number,
+      default: 0
+    },
+    incorrect: {
+      type: Number,
+      default: 0
+    }
   },
   {
     timestamps: true,

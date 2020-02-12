@@ -15,7 +15,7 @@ const {
   isActive } = require('./middlewares/index')
 
 mongoose
-  .connect('mongodb://localhost/zombicody', {
+  .connect(process.env.DB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true

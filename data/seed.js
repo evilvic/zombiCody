@@ -30,7 +30,7 @@ const kangorooQuestions = [
       option4: 'D',
       option5: 'E',
       solution: 'option5',
-      feedback: 'La línea E mide 15 cuadros y es la más larga'
+      feedback: 'La línea E mide 15 cuadros y es la más larga.'
   },
   {
       content: 'El Sr. Rodríguez quiere tender las toallas que lavó usando la menor cantidad posible de pinzas. Para 3 toallas necesita 4 pinzas, como se muestra en la figura. ¿Cuántas pinzas necesita para 9 toallas?',
@@ -52,7 +52,7 @@ const kangorooQuestions = [
       option4: '8',
       option5: '9',
       solution: 'option3',
-      feedback: 'Juntaron 12 + 9 = 21 dulces. Entonces cada una recibió 7 dulces'
+      feedback: 'Juntaron 12 + 9 = 21 dulces. Entonces cada una recibió 7 dulces.'
   },
   {
       content: '¿Cuál es la pieza que completa el cuadrado?',

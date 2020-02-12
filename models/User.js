@@ -32,7 +32,27 @@ const userSchema = new Schema (
     confirmationCode: {
       type: String,
       unique:true
-    }
+    },
+    correctQuestions: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Question'
+      }
+    ],
+    classCode: {
+      type: String,
+      default: ''
+    },
+    parentCode: {
+      type: String,
+      default: ''
+    },
+    courses: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Course'
+      }
+    ]
   },
   {
     timestamps: true,
