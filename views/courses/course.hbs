@@ -2,23 +2,23 @@
 <section id="header-course">
 
   <div>
-    <h2>{{title}}</h2>
-    <p>{{description}}</p>
-    <p class="course-code">CODE: {{this.courseCode}}</p>
+    <h2>{{course.title}}</h2>
+    <p>{{course.description}}</p>
+    <p class="course-code">CODE: {{course.courseCode}}</p>
   </div>
 
-  <img src="{{image_URL}}" alt="Medalla {{title}}">
+  <img src="{{course.image_URL}}" alt="Medalla {{course.title}}">
 
 </section>
 
 <section id="questions">
 
-  {{#each questions as |question|}}
+  {{#each course.questions as |question|}}
 
   <a href="/question/{{question}}">
     <div class="horizontal">
       
-      <div class="circle"></div>
+      <div id={{question}} class="circle"></div>
       <p>Pregunta {{@index}}</p>
 
     </div>
@@ -27,5 +27,3 @@
   {{/each}}
 
 </section>
-
-

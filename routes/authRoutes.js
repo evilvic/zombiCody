@@ -9,7 +9,8 @@ const {
   logout,
   confirmationView,
   activateUser,
-  deleteAccount
+  deleteAccount,
+  getStatus
 } = require('../controllers/authControllers')
 
 router
@@ -27,5 +28,6 @@ router
   .get('/confirmation', confirmationView)
   .get('/activate/:token', activateUser)
   .post('/delete', deleteAccount)
+  .get('/getStatus', getStatus)
 
 module.exports = router

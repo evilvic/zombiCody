@@ -68,3 +68,7 @@ exports.deleteAccount = async (req, res) => {
   await User.findOneAndDelete({ username })
   res.redirect('/')
 }
+
+exports.getStatus = (req, res) => {
+  res.send(req.user)
+}

@@ -10,7 +10,7 @@ exports.coursesView = async (req, res) => {
 exports.courseView = async (req, res) => {
   const { id } = req.params
   const course = await Course.findById(id)
-  res.render('courses/course', course)
+  res.render('courses/course', {course, user: req.user})
 }
 
 exports.questionView = async (req, res) => {
