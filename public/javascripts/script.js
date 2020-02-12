@@ -26,6 +26,7 @@ const register = () => {
   const $validationButton = document.querySelector('#validation')
 
   const $emailLabel = document.querySelector('label[for="email"]')
+  const $emailLabel2 = document.querySelector('label[for="email2"]')
   const $emailInput = document.querySelector('input[name="email"]')
   const $usernameLabel = document.querySelector('label[for="username"]')
   const $usernameInput = document.querySelector('input[name="username"]')
@@ -37,12 +38,24 @@ const register = () => {
 
   if($birthdayInput.value != "") {
 
+    let dateOfBirth = new Date($birthdayInput.value)
+    let ageDifMs = Date.now() - dateOfBirth.getTime()
+    let ageDate = new Date(ageDifMs)
+    let age = Math.abs(ageDate.getUTCFullYear() - 1970)
+
+    if(age >= 18) {
+      $emailLabel2.style.display = "flex"
+      $emailLabel.style.display = "none"
+    } else {
+      $emailLabel2.style.display = "none"
+      $emailLabel.style.display = "flex"
+    }
+
     $birthdayLabel.style.display = "none"
     $birthdayInput.style.display = "none"
 
     $validationButton.style.display = "none"
   
-    $emailLabel.style.display = "flex"
     $emailInput.style.display = "flex"
     $usernameLabel.style.display = "flex"
     $usernameInput.style.display = "flex"
