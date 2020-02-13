@@ -8,7 +8,12 @@
   <button onclick="showMenu()"><i class="fas fa-bars"></i></button>
   <div id="menu">
     <a href="/courses"><p class="link">CURSOS</p></a>
+    {{#if logged}}
+    <a href="/private/dashboard"><p class="link">PERFIL</p></a>
+    <a href="/auth/logout"><p class="link">CERRAR SESION</p></a>
+    {{else}}
     <a href="/auth/signup"><p class="link">REGÍSTRATE</p></a>
     <a href="/auth/login"><p class="link">INICIA SESIÓN</p></a>
+    {{/if}}
   </div>
 </nav>

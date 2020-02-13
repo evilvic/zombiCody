@@ -24,7 +24,7 @@
       font-weight: bold;
       margin-bottom: 3px;
     }
-    input {
+    input , select {
       width: 100%;
       height: 50px;
       border: 2px solid $pink;
@@ -33,12 +33,18 @@
       text-align: center;
       background-color: white;
     }
+    select {
+      margin-bottom: 20px;
+    }
     label[for="email"],
     input[name="email"],
     label[for="username"],
     input[name="username"],
     label[for="password"],
-    input[name="password"]
+    input[name="password"],
+    label[for="email2"],
+    label[for="role"],
+    select[name="role"]
     {
       display: none;
     }

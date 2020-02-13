@@ -313,7 +313,7 @@ footer {
       font-size: 1.4rem;
       font-weight: bold;
       margin-bottom: 3px; }
-    #signup div input {
+    #signup div input, #signup div select {
       width: 100%;
       height: 50px;
       border: 2px solid #ffcfe1;
@@ -321,12 +321,17 @@ footer {
       font-size: 1.5rem;
       text-align: center;
       background-color: white; }
+    #signup div select {
+      margin-bottom: 20px; }
     #signup div label[for="email"],
     #signup div input[name="email"],
     #signup div label[for="username"],
     #signup div input[name="username"],
     #signup div label[for="password"],
-    #signup div input[name="password"] {
+    #signup div input[name="password"],
+    #signup div label[for="email2"],
+    #signup div label[for="role"],
+    #signup div select[name="role"] {
       display: none; }
   #signup input[type="submit"] {
     display: flex;

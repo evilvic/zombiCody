@@ -34,6 +34,9 @@ const register = () => {
   const $passwordInput = document.querySelector('input[name="password"]')
   const $submitInput = document.querySelector('input[type="submit"]')
 
+  const $roleLabel = document.querySelector('label[for="role"]')
+  const $roleSelect = document.querySelector('select[name="role"]')
+
 
 
   if($birthdayInput.value != "") {
@@ -46,9 +49,20 @@ const register = () => {
     if(age >= 18) {
       $emailLabel2.style.display = "flex"
       $emailLabel.style.display = "none"
+      $roleLabel.style.display = "flex"
+      $roleSelect.style.display = "flex"
+
+      $birthdayLabel.style.display = "none"
+    $birthdayInput.style.display = "none"
+
     } else {
       $emailLabel2.style.display = "none"
       $emailLabel.style.display = "flex"
+      $roleLabel.style.display = "none"
+      $roleSelect.style.display = "none"
+
+      $birthdayLabel.style.display = "none"
+    $birthdayInput.style.display = "none"
     }
 
     $birthdayLabel.style.display = "none"

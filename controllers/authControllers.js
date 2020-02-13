@@ -13,7 +13,7 @@ exports.signup = async (req, res) => {
       token += characters[Math.floor(Math.random() * characters.length )]
   }
 
-  const { birthday, email, username, password } = req.body
+  const { birthday, email, username, password, role } = req.body
 
   if (
     birthday === '' || 
@@ -33,7 +33,8 @@ exports.signup = async (req, res) => {
     birthday,
     email,
     username,
-    confirmationCode: token
+    confirmationCode: token,
+    role
   }, password)
 
   confirmAccount(
