@@ -45,11 +45,29 @@ exports.validateQuestion = async (req, res) => {
   if (response === question.solution) {
     const user = await User.findById(req.user._id)
     if (user.correctQuestions.indexOf(question._id) == -1) {
+
+      if (user.incorrectQuestions.indexOf(question._id) != -1) {
+        const index = user.incorrectQuestions.indexOf(question._id)
+        user.incorrectQuestions.splice(index, 1)
+      }
+
       user.correctQuestions.push(question._id)
       user.save()
+
     }
     res.render('courses/question', {question, message: '¡Correcto!', nextQuestion})
   } else {
+    const user = await User.findById(req.user._id)
+    if (user.incorrectQuestions.indexOf(question._id) == -1) {
+
+      if (user.correctQuestions.indexOf(question._id) != -1) {
+        const index = user.correctQuestions.indexOf(question._id)
+        user.correctQuestions.splice(index, 1)
+      }
+
+      user.incorrectQuestions.push(question._id)
+      user.save()
+    }
     res.render('courses/question', {question, message: '¡Intenta de nuevo!', nextQuestion})
   }
 }

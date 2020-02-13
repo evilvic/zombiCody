@@ -39,6 +39,12 @@ const userSchema = new Schema (
         ref: 'Question'
       }
     ],
+    incorrectQuestions: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Question'
+      }
+    ],
     classCode: {
       type: String,
       default: ''
