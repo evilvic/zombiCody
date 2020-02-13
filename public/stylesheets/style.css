@@ -607,7 +607,76 @@ h1 {
 #question-layout {
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  align-items: center; }
+  justify-content: center;
+  align-items: center;
+  width: 100vw; }
+  #question-layout div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%; }
+    #question-layout div h4 {
+      font-size: 2rem;
+      color: #a98bd5;
+      margin-top: 30px; }
+    #question-layout div p {
+      margin-top: 30px;
+      font-size: 2rem;
+      color: #646464;
+      text-align: center; }
+    #question-layout div img {
+      width: 350px; }
+    #question-layout div form {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      padding: 20px; }
+      #question-layout div form .option {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 10px; }
+        #question-layout div form .option input[type=radio] {
+          border: 0px;
+          width: 7%;
+          height: 2.5rem; }
+        #question-layout div form .option label {
+          font-size: 2rem;
+          margin-left: 10px; }
+      #question-layout div form input[type=submit] {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #96ffe2;
+        color: #a98bd5;
+        width: 70vw;
+        height: 50px;
+        border: 3px solid #76f3ff;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        margin-top: 10px; }
+    #question-layout div #control-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      #question-layout div #control-buttons a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #76f3ff;
+        color: #a98bd5;
+        width: 30vw;
+        height: 50px;
+        border: 3px solid #a98bd5;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        margin-top: 10px; }
 
 /*# sourceMappingURL=style.css.map */
