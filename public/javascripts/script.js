@@ -5,6 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(element)
     document.getElementById(`${element}`).style.backgroundColor = "rgb(150, 255, 226)"
   }))
+  axios.get('/auth/getStatus').then(request => {
+    
+    if (request.data.role != 'teacher') {
+      document.querySelector('#create-course-teacher').style.display = 'none'
+    }
+
+  })
 
 
 }, false);

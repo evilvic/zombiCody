@@ -83,7 +83,7 @@ app.use('/', nav, require('./routes/index'))
 app.use('/auth', nav, require('./routes/authRoutes'))
 app.use('/private', isLoggedIn, isActive, nav, require('./routes/privateRoutes'))
 app.use('/info', nav, require('./routes/infoRoutes'))
-app.use('/create', nav, isLoggedIn, isActive, isTeacher, require('./routes/createRoutes'))
+app.use('/create', isLoggedIn, isActive, isTeacher, nav, require('./routes/createRoutes'))
 
 
 module.exports = app;

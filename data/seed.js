@@ -36,44 +36,22 @@ const medals = [
     value: 100
   }
 ]
-const kangorooQuestions = []
 
+require('dotenv').config();
 const mongoose = require('mongoose')
-const Course = require('../models/Course')
-const Question = require('../models/Question')
-
-
-const kangoroo = {
-    title: 'Kangoroo',
-    image_URL: '',
-    description: 'Math for fun and glory'
-}
+const Medal = require('../models/Medal')
 
 mongoose
-  .connect('mongodb://localhost/zombicody', {
+  .connect(process.env.DB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
   })
   .then(async x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
-    //await Course.create(kangoroo).then(res => console.log('DB Ready...'))
-    //await Question.create(kangorooQuestions).then(res => console.log('DB Ready...'))
-    const course = await Course.findById('5e41c741a6381e73a4aae92e')
-    const questions = await Question.find()
+
+    await Medal.create(medals)
     
-    let questionsIdArr = []
-    questions.forEach(question => {
-        questionsIdArr.push(question._id)
-    })
-
-    console.log(questionsIdArr)
-
-    course.questions = questionsIdArr
-
-    course.save()
-
-
   })
   .catch(err => {
     console.error('Error connecting to mongo', err)

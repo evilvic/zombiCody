@@ -1,6 +1,7 @@
 const Course = require('../models/Course')
 const Question = require('../models/Question')
 const User = require('../models/User')
+const Medal = require('../models/Medal')
 
 exports.coursesView = async (req, res) => {
   const allCourses = await Course.find()
@@ -52,6 +53,24 @@ exports.validateQuestion = async (req, res) => {
       }
 
       user.correctQuestions.push(question._id)
+      switch(user.correctQuestions.length) {
+        case 1:
+          const medal1 = await Medal.find({name: 'Beginner zombi!'})
+          console.log(medal1)
+          console.log(medal1[0]._id)
+          user.medals.push(medal1[0]._id)
+          console.log(user)
+          break
+        case 5:
+          const medal5 = await Medal.find({name: 'Give me 5!'})
+          console.log(medal5)
+          console.log(medal5[0]._id)
+          user.medals.push(medal5[0]._id) 
+          console.log(user)          
+          break   
+      }
+
+      user.percentage = Math.floor(user.correctQuestions.length / (user.correctQuestions.length + user.incorrectQuestions.length) * 100)
       user.save()
 
     }
@@ -66,6 +85,7 @@ exports.validateQuestion = async (req, res) => {
       }
 
       user.incorrectQuestions.push(question._id)
+      user.percentage = Math.floor(user.correctQuestions.length / (user.correctQuestions.length + user.incorrectQuestions.length) * 100)
       user.save()
     }
     res.render('courses/question', {question, message: '¡Intenta de nuevo!', nextQuestion})
