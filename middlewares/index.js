@@ -14,3 +14,12 @@ exports.nav = (req, res, next) => {
   }
   next()
 }
+
+exports.isTeacher = (req, res, next) => {
+  if (req.user.role === 'teacher') {
+    next()
+  } else {
+    res.redirect('/')
+  }
+} 
+

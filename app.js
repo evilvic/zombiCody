@@ -13,6 +13,7 @@ const session      = require('express-session')
 const { 
   isLoggedIn,
   isActive,
+  isTeacher,
   nav } = require('./middlewares/index')
 
 mongoose
@@ -82,7 +83,7 @@ app.use('/', nav, require('./routes/index'))
 app.use('/auth', nav, require('./routes/authRoutes'))
 app.use('/private', isLoggedIn, isActive, nav, require('./routes/privateRoutes'))
 app.use('/info', nav, require('./routes/infoRoutes'))
-app.use('/create', nav, require('./routes/createRoutes'))
+app.use('/create', nav, isLoggedIn, isActive, isTeacher, require('./routes/createRoutes'))
 
 
 module.exports = app;
