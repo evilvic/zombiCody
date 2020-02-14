@@ -5,6 +5,10 @@ const courseSchema = new Schema (
     title: String,
     image_URL: String,
     description: String,
+    author: {
+      type: Schema.Types.ObjectId,
+      ref: 'User'
+    },
     courseCode: {
       type: String,
       default: ''

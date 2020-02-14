@@ -6,9 +6,11 @@
 
 #login {
   @include flex(flex, column, center, center);
+  width: 90%;
   h2 { 
     margin-bottom: 20px;
     color: $purple;
+    text-align: center;
   }
   div {
     @include flex(flex, column, center, left);

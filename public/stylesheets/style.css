@@ -467,10 +467,12 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  width: 90%; }
   #login h2 {
     margin-bottom: 20px;
-    color: #a98bd5; }
+    color: #a98bd5;
+    text-align: center; }
   #login div {
     display: flex;
     flex-direction: column;

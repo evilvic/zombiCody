@@ -4,24 +4,24 @@
     <h2>Crea un curso</h2>
     <div>
       <label>Título</label>
-      <input type="text" name="title">
+      <input type="text" name="title" required>
     </div>
     <div>
       <label>Descripción</label>
-      <input type="text" name="description">
+      <input type="text" name="description" required>
     </div>
     <div>
       <label>Materia</label>
       <select name="courseCode" >
           <option value="Matemáticas">Matemáticas</option>
-          <option value="Lenguajes">Lenguajes</option>
+          <option value="Idiomas">Idiomas</option>
       </select>
     </div>
     <div>
       <label>Imagen</label>
     </div>
     <div>
-      <input type="file" name="portrait">
+      <input type="file" name="portrait" required>
     </div>
     <input type="submit" value="Crear preguntas">
 </form>
