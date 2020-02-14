@@ -1,28 +1,44 @@
 <section id="question-layout">
+  <div>
+    <h4>{{message}}</h4>
+    <p>{{question.content}}</p>
 
-<h2>{{question.content}}</h2>
+    <img src="{{question.image_URL}}" alt="image">
 
-<img src="{{question.image_URL}}" alt="image">
+    <form action="/validate/{{question._id}}" method="POST">
 
-<form action="/validate/{{question._id}}" method="POST">
+      <div class="option">
+        <input type="radio" name="response" value="option1">
+        <label>{{question.option1}}</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="response" value="option2">
+        <label>{{question.option2}}</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="response" value="option3">
+        <label>{{question.option3}}</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="response" value="option4">
+        <label>{{question.option4}}</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="response" value="option5">
+        <label>{{question.option5}}</label>
+      </div>
+      <input type="submit" value="Enviar">
 
-  <input type="radio" name="response" value="option1">
-  <label>{{question.option1}}</label>
-  <input type="radio" name="response" value="option2">
-  <label>{{question.option2}}</label>
-  <input type="radio" name="response" value="option3">
-  <label>{{question.option3}}</label>
-  <input type="radio" name="response" value="option4">
-  <label>{{question.option4}}</label>
-  <input type="radio" name="response" value="option5">
-  <label>{{question.option5}}</label>
-  <input type="submit">
+    </form>
 
-</form>
+    <div id="control-buttons">
+      <a href="/courses/{{id}}">CURSOS</a>
+      <a href="/question/{{nextQuestion._id}}">SIGUIENTE</a>
 
-<p>{{message}}</p>
+    </div>
 
-<a href="/courses">Regresar al curso</a>
-<a href="/question/{{nextQuestion._id}}">Siguiente pregunta</a>
+
+  </div>
+
 
 </section>

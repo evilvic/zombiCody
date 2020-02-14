@@ -39,6 +39,22 @@ const userSchema = new Schema (
         ref: 'Question'
       }
     ],
+    incorrectQuestions: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Question'
+      }
+    ],
+    percentage: {
+      type: Number,
+      default: 0
+    },
+    medals: [
+      {
+        type:Schema.Types.ObjectId,
+        ref: 'Medal'
+      }
+    ],
     classCode: {
       type: String,
       default: ''

@@ -1,7 +1,19 @@
 const User = require('../models/User')
+const Medal = require('../models/Medal')
 
-exports.dashboardView = (req, res) => {
-  res.render('private/dashboard', req.user)
+exports.dashboardView = async (req, res) => {
+  const medals = await Medal.find()
+  const { _id } = req.user
+  const user = await User.findOne({ _id })
+  let arrayCurrentMedals = []
+  medals.forEach(medal => {
+    user.medals.forEach(userMedal => {
+      if (medal._id.toString() == userMedal._id.toString()) {
+        arrayCurrentMedals.push(medal)
+      }
+    })
+  })
+  res.render('private/dashboard', {user: req.user, arrayCurrentMedals})
 }
 
 exports.settingsView = (req, res) => {

@@ -12,7 +12,9 @@ const passport     = require('./config/passport')
 const session      = require('express-session')
 const { 
   isLoggedIn,
-  isActive } = require('./middlewares/index')
+  isActive,
+  isTeacher,
+  nav } = require('./middlewares/index')
 
 mongoose
   .connect(process.env.DB, {
@@ -77,11 +79,11 @@ app.locals.title = 'zombiCody';
 
 
 
-app.use('/', require('./routes/index'))
-app.use('/auth', require('./routes/authRoutes'))
-app.use('/private', isLoggedIn, isActive, require('./routes/privateRoutes'))
-app.use('/info', require('./routes/infoRoutes'))
-app.use('/create', require('./routes/createRoutes'))
+app.use('/', nav, require('./routes/index'))
+app.use('/auth', nav, require('./routes/authRoutes'))
+app.use('/private', isLoggedIn, isActive, nav, require('./routes/privateRoutes'))
+app.use('/info', nav, require('./routes/infoRoutes'))
+app.use('/create', isLoggedIn, isActive, isTeacher, nav, require('./routes/createRoutes'))
 
 
 module.exports = app;

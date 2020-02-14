@@ -1,3 +1,66 @@
 #question-layout {
-  @include flex(flex, column, left, center);
+  @include flex(flex, column, center, center);
+  width: 100vw;
+  div {
+    @include flex(flex, column, center, center);
+    width: 90%;
+    h4 {
+      font-size: 2rem;
+      color: $purple;
+      margin-top: 30px;
+    }
+    p {
+      margin-top: 30px;
+      font-size: 2rem;
+      color: $gray;
+      text-align: center;
+      
+    }
+    img {
+      width: 350px;
+    }
+    form {
+      @include flex(flex, column, flex-start, center);
+      width: 100%;
+      padding: 20px;
+      .option {
+        @include flex(flex, row, flex-start, flex-start);
+        padding: 10px;
+        input[type=radio] {
+          border: 0px;
+          width: 7%;
+          height: 2.5rem;
+        }
+        label {
+          font-size: 2rem;
+          margin-left: 10px;
+        }
+      }
+      input[type=submit] {
+        @include flex(flex, row, center, center);
+      background-color: $green;
+      color: $purple;
+      width: 70vw;
+      height: 50px;
+      border: 3px solid $blue;
+      border-radius: 5px;
+      font-size: 1.5rem;
+      margin-top: 10px;
+      }
+    }
+    #control-buttons {
+      @include flex(flex, row, space-between, center);
+      a {
+        @include flex(flex, row, center, center);
+      background-color: $blue;
+      color: $purple;
+      width: 30vw;
+      height: 50px;
+      border: 3px solid $purple;
+      border-radius: 5px;
+      font-size: 1.5rem;
+      margin-top: 10px;
+      }
+    }
+  }
 }

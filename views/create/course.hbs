@@ -1,10 +1,29 @@
-<h1>En ésta página se crea el set</h1>
+<section id="course-create-container">
+
 <form action="/create/course" method="POST" enctype="multipart/form-data">
-    <label>Título</label>
-    <input type="text" name="title">
-    <label>Descripción</label>
-    <input type="text" name="description">
-    <label>Imagen</label>
-    <input type="file" name="portrait">
-    <input type="submit">
+    <h2>Crea un curso</h2>
+    <div>
+      <label>Título</label>
+      <input type="text" name="title" required>
+    </div>
+    <div>
+      <label>Descripción</label>
+      <input type="text" name="description" required>
+    </div>
+    <div>
+      <label>Materia</label>
+      <select name="courseCode" >
+          <option value="Matemáticas">Matemáticas</option>
+          <option value="Idiomas">Idiomas</option>
+      </select>
+    </div>
+    <div>
+      <label>Imagen</label>
+    </div>
+    <div>
+      <input type="file" name="portrait" required>
+    </div>
+    <input type="submit" value="Crear preguntas">
 </form>
+
+</section>

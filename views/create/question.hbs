@@ -1,44 +1,64 @@
-<h1>Aquí van las super questions</h1>
-<form action="/course"></form>
+<section id="question-header">
+  <div>
+    <h2>{{title}}</h2>
+    <p>{{description}}</p>
+    <p class="course-code">{{courseCode}}</p>
+  </div>
+<img src="{{image_URL}}" alt="Medalla {{title}}">
+</section>
 
-<h1>{{_id}}</h1>
-<h1>{{title}}</h1>
-<h1>{{description}}</h1>
-<img src="{{image_URL}}" alt="">
+
+<section id="question-create-container">
+
+
+
+
 
 <form action="/create/course/{{_id}}" method="POST" enctype="multipart/form-data">
-  <label>Pregunta</label>
-  <input type="text" name="content">
-  <br>
-  <label>Imagen</label>
-  <input type="file" name="image">
-  <br>
-  <label>Option 1</label>
-  <input type="text" name="option1">
-  <br>
-  <label>Option 2</label>
-  <input type="text" name="option2">
-  <br>
-  <label>Option 3</label>
-  <input type="text" name="option3">
-  <br>
-  <label>Option 4</label>
-  <input type="text" name="option4">
-  <br>
-  <label>Option 5</label>
-  <input type="text" name="option5">
-  <br>
-  <label>Respuesta correcta</label>
-  <select name="solution">
-    <option value="option1">Option 1</option>
-    <option value="option2">Option 2</option>
-    <option value="option3">Option 3</option>
-    <option value="option4">Option 4</option>
-    <option value="option5">Option 5</option>
-  </select>
-  <br>
-  <label>Retroalimentación</label>
-  <input type="text" name="feedback">
-  <br>
-  <input type="submit">
+  <h2>Crea una pregunta</h2>
+  <div>
+    <label>Pregunta</label>
+    <input type="text" name="content" required>
+  </div>
+  <div>
+    <label>Imagen</label>
+    <input type="file" name="image" required>
+  </div>
+  <div>
+    <label>Option 1</label>
+    <input type="text" name="option1" required>
+  </div>
+  <div>
+    <label>Option 2</label>
+    <input type="text" name="option2" required>
+  </div>
+  <div>
+    <label>Option 3</label>
+    <input type="text" name="option3" required>
+  </div>
+  <div>
+    <label>Option 4</label>
+    <input type="text" name="option4" required>
+  </div>
+  <div>
+    <label>Option 5</label>
+    <input type="text" name="option5" required>
+  </div>
+  <div>
+    <label>Respuesta correcta</label>
+    <select name="solution">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+      <option value="option4">Option 4</option>
+      <option value="option5">Option 5</option>
+    </select>
+  </div>
+  <div>
+    <label>Retroalimentación</label>
+    <input type="text" name="feedback" required>
+  </div>
+  <input type="submit" value="Enviar pregunta">
 </form>
+<a href="/courses">Finalizar</a>
+</section>

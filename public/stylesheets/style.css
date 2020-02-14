@@ -282,6 +282,66 @@ footer {
   #all-courses img {
     width: 90px; }
 
+#course-create-container, #question-create-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw; }
+  #course-create-container form, #question-create-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #course-create-container form h2, #question-create-container form h2 {
+      margin-bottom: 20px;
+      color: #a98bd5; }
+    #course-create-container form div, #question-create-container form div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left;
+      width: 70vw;
+      padding: 10px 0; }
+      #course-create-container form div label, #question-create-container form div label {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 3px; }
+      #course-create-container form div input, #course-create-container form div select, #question-create-container form div input, #question-create-container form div select {
+        width: 100%;
+        height: 50px;
+        border: 2px solid #ffcfe1;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        text-align: center;
+        background-color: white; }
+    #course-create-container form input[type="submit"], #question-create-container form input[type="submit"] {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-color: #96ffe2;
+      color: #a98bd5;
+      width: 70vw;
+      height: 50px;
+      border: 3px solid #76f3ff;
+      border-radius: 5px;
+      font-size: 1.5rem;
+      margin-top: 10px; }
+  #course-create-container a, #question-create-container a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffcfe1;
+    color: #a98bd5;
+    width: 70vw;
+    height: 50px;
+    border: 3px solid #a98bd5;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin-top: 10px; }
+
 .container-column {
   display: flex;
   flex-direction: column;
@@ -313,7 +373,7 @@ footer {
       font-size: 1.4rem;
       font-weight: bold;
       margin-bottom: 3px; }
-    #signup div input {
+    #signup div input, #signup div select {
       width: 100%;
       height: 50px;
       border: 2px solid #ffcfe1;
@@ -321,12 +381,17 @@ footer {
       font-size: 1.5rem;
       text-align: center;
       background-color: white; }
+    #signup div select {
+      margin-bottom: 20px; }
     #signup div label[for="email"],
     #signup div input[name="email"],
     #signup div label[for="username"],
     #signup div input[name="username"],
     #signup div label[for="password"],
-    #signup div input[name="password"] {
+    #signup div input[name="password"],
+    #signup div label[for="email2"],
+    #signup div label[for="role"],
+    #signup div select[name="role"] {
       display: none; }
   #signup input[type="submit"] {
     display: flex;
@@ -402,10 +467,12 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  width: 90%; }
   #login h2 {
     margin-bottom: 20px;
-    color: #a98bd5; }
+    color: #a98bd5;
+    text-align: center; }
   #login div {
     display: flex;
     flex-direction: column;
@@ -438,6 +505,9 @@ footer {
     border-radius: 5px;
     font-size: 1.5rem;
     margin-top: 10px; }
+
+#dashboard-container {
+  height: 100%; }
 
 .dashboard-title {
   display: flex;
@@ -481,81 +551,177 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
-  .dashboard-image img {
-    width: 30vw; }
-  .dashboard-image p, .dashboard-image a {
-    color: #646464;
-    font-size: 2rem; }
-  .dashboard-image a {
-    margin-inline-start: 1vh;
-    margin-block-start: 1vh; }
+  align-items: center;
+  background-image: url("../images/identity/background2.png"); }
+  .dashboard-image .white-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    background-color: white;
+    border: 5px solid #ffcfe1;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px; }
+    .dashboard-image .white-image img {
+      width: 150px; }
+
+#profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  height: 300px; }
+  #profile-info h2 {
+    color: #a98bd5;
+    font-size: 3rem;
+    margin: 20px 0; }
+  #profile-info a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #96ffe2;
+    color: #a98bd5;
+    width: 120px;
+    height: 40px;
+    border: 3px solid #76f3ff;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin: 20px 0; }
 
 .achievements {
   width: 100vw;
-  height: 50vh;
-  background-image: url("../images/identity/background2.png");
-  background-position: center;
-  background-repeat: repeat; }
-  .achievements p {
-    font-size: 5rem; }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .achievements .super-medal {
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 20px; }
+    .achievements .super-medal img {
+      width: 100px; }
+    .achievements .super-medal h6 {
+      font-size: 2rem;
+      text-align: center;
+      padding: 5px;
+      height: 50px;
+      margin-top: 10px;
+      color: #646464; }
+    .achievements .super-medal p {
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 5px;
+      height: 60px;
+      margin-bottom: 20px;
+      color: #646464; }
 
-h1 {
-  margin-inline-start: 5vw;
-  margin-block-start: 2vh;
-  color: #a98bd5; }
-
-.avatar p {
-  color: #a98bd5;
-  margin-inline-start: 5vw;
-  margin-block-start: 2vh;
-  font-size: 2rem;
-  color: #646464; }
-
-.avatar form {
-  margin-block-end: 3vh;
-  margin-inline-start: 5vw;
-  margin-inline-end: 5vw; }
+.avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .avatar h2 {
+    margin-inline-start: 5vw;
+    margin-block-start: 2vh;
+    color: #a98bd5; }
+  .avatar p {
+    color: #a98bd5;
+    margin-inline-start: 5vw;
+    margin-block-start: 2vh;
+    font-size: 2rem;
+    color: #646464; }
+  .avatar form {
+    margin-block-end: 3vh;
+    margin-inline-start: 5vw;
+    margin-inline-end: 5vw; }
 
 .avatar-form {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap; }
   .avatar-form img {
     display: flex;
     flex-direction: column;
-    width: 18vw; }
+    width: 75px; }
   .avatar-form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-block-start: 4vh;
     margin-inline-end: 5vw;
-    border: solid #a98bd5;
-    background-image: url("/images/identity/background2.png"); }
+    border: 3px solid #a98bd5;
+    border-radius: 10px; }
   .avatar-form input[type="radio"] {
-    margin-inline-start: 9vw;
-    margin-block-end: 5vh;
-    font-size: 30px; }
+    font-size: 30px;
+    margin-bottom: 10px; }
+  .avatar-form button {
+    height: 100px;
+    width: 80px; }
 
 .delete {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  border: solid #a73535;
-  background-image: url("/images/identity/background.png");
-  width: 80vw;
+  align-items: center;
+  border: solid #cb2a1c;
+  width: 90vw;
   margin-inline-start: 5vw;
   margin-block-end: 5vh;
-  background-color: rgba(255, 0, 0, 0.1); }
+  background-color: #feaea7;
+  padding: 20px 10px; }
 
 .delete form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
   color: black;
   font-size: 2rem; }
   .delete form h2 {
-    margin-block-end: 2vh; }
+    margin-block-end: 2vh;
+    padding: 10px; }
   .delete form label {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    padding: 10px; }
+  .delete form p {
+    font-size: 1.2rem;
+    padding: 10px; }
   .delete form input {
-    border: solid #201c1c; }
+    width: 100%;
+    height: 50px;
+    border: 2px solid #ffcfe1;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: white; }
+  .delete form input[type=submit] {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #feaea7;
+    color: #cb2a1c;
+    width: 70vw;
+    height: 50px;
+    border: 3px solid #cb2a1c;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin-top: 10px; }
 
-#header-course {
+#header-course, #question-header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -564,22 +730,22 @@ h1 {
   height: 300px;
   background-color: #76f3ff;
   padding: 30px; }
-  #header-course div {
+  #header-course div, #question-header div {
     margin-right: 10px; }
-    #header-course div h2 {
+    #header-course div h2, #question-header div h2 {
       font-size: 2.5rem;
       text-align: left;
       margin: 0; }
-    #header-course div p {
+    #header-course div p, #question-header div p {
       font-size: 1.5rem;
       text-align: left;
       padding: 5px 0;
       margin: 3px 0; }
-      #header-course div p.course-code {
+      #header-course div p.course-code, #question-header div p.course-code {
         background-color: #ffffd8;
         text-align: center;
         width: 150px; }
-  #header-course img {
+  #header-course img, #question-header img {
     width: 90px; }
 
 #questions .circle {
@@ -602,7 +768,76 @@ h1 {
 #question-layout {
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  align-items: center; }
+  justify-content: center;
+  align-items: center;
+  width: 100vw; }
+  #question-layout div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%; }
+    #question-layout div h4 {
+      font-size: 2rem;
+      color: #a98bd5;
+      margin-top: 30px; }
+    #question-layout div p {
+      margin-top: 30px;
+      font-size: 2rem;
+      color: #646464;
+      text-align: center; }
+    #question-layout div img {
+      width: 350px; }
+    #question-layout div form {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      padding: 20px; }
+      #question-layout div form .option {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 10px; }
+        #question-layout div form .option input[type=radio] {
+          border: 0px;
+          width: 7%;
+          height: 2.5rem; }
+        #question-layout div form .option label {
+          font-size: 2rem;
+          margin-left: 10px; }
+      #question-layout div form input[type=submit] {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #96ffe2;
+        color: #a98bd5;
+        width: 70vw;
+        height: 50px;
+        border: 3px solid #76f3ff;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        margin-top: 10px; }
+    #question-layout div #control-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      #question-layout div #control-buttons a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #76f3ff;
+        color: #a98bd5;
+        width: 30vw;
+        height: 50px;
+        border: 3px solid #a98bd5;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        margin-top: 10px; }
 
 /*# sourceMappingURL=style.css.map */

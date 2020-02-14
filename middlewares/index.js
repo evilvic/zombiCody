@@ -3,5 +3,25 @@ exports.isLoggedIn = (req, res, next) => {
 }
 
 exports.isActive = (req, res, next) => {
-  req.user.status === 'active' ? next() : res.send('Por favor, activa tu cuenta')
+  req.user.status === 'active' ? next() : res.render('auth/activate')
 }
+
+exports.nav = (req, res, next) => {
+  if (req.isAuthenticated()) {
+    req.app.locals.logged = true
+  } else {
+    req.app.locals.logged = false
+  }
+  next()
+}
+
+exports.isTeacher = (req, res, next) => {
+  if (req.user.role === 'teacher') {
+    next()
+  } else {
+    res.redirect('/')
+  }
+} 
+
+
+
