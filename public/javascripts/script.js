@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
   axios.get('/auth/getStatus').then(({data:{correctQuestions}}) => correctQuestions.forEach(element => {
     document.getElementById(`${element}`).style.backgroundColor = "rgb(150, 255, 226)"
   }))

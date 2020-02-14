@@ -506,6 +506,9 @@ footer {
     font-size: 1.5rem;
     margin-top: 10px; }
 
+#dashboard-container {
+  height: 100%; }
+
 .dashboard-title {
   display: flex;
   flex-direction: row;
@@ -569,10 +572,12 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px; }
+  padding: 30px;
+  height: 300px; }
   #profile-info h2 {
     color: #a98bd5;
-    font-size: 3rem; }
+    font-size: 3rem;
+    margin: 20px 0; }
   #profile-info a {
     display: flex;
     flex-direction: row;
@@ -585,16 +590,7 @@ footer {
     border: 3px solid #76f3ff;
     border-radius: 5px;
     font-size: 1.2rem;
-    margin-top: 10px; }
-
-#title-achievements {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; }
-  #title-achievements h2 {
-    text-align: center;
-    color: #646464; }
+    margin: 20px 0; }
 
 .achievements {
   width: 100vw;

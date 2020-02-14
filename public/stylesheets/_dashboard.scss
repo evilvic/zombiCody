@@ -1,3 +1,7 @@
+#dashboard-container {
+  height: 100%;
+}
+
 .dashboard-title {
   display: flex;
   flex-direction: row;
@@ -65,9 +69,11 @@
 #profile-info {
   @include flex(flex, column, center, center);
   padding: 30px;
+  height: 300px;
   h2 {
     color: $purple;
     font-size: 3rem;
+    margin: 20px 0;
   }
   a {
     @include flex(flex, row, center, center);
@@ -78,15 +84,8 @@
     border: 3px solid $blue;
     border-radius: 5px;
     font-size: 1.2rem;
-    margin-top: 10px;
-  }
-}
+    margin: 20px 0;
 
-#title-achievements {
-  @include flex(flex, row, center, center);
-  h2 {
-    text-align: center;
-    color: $gray;
   }
 }
 
