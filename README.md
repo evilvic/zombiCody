@@ -27,4 +27,4 @@ Teachers, on the other hand, have the same access as our other users and can als
 
 ___
 
-**zombiCody** was created by [Luis Manuel Lozano Castro](https://github.com/lslozano) &  [Víctor Peña Romero](https://github.com/evilvic) with ❤️🧠 at Ironhack.
+**zombiCody** was created by [Luis Manuel Lozano Castro](https://github.com/lslozano) and [Víctor Peña Romero](https://github.com/evilvic) with ❤️&🧠 at Ironhack.
