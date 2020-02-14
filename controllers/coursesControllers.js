@@ -56,18 +56,28 @@ exports.validateQuestion = async (req, res) => {
       switch(user.correctQuestions.length) {
         case 1:
           const medal1 = await Medal.find({name: 'Beginner zombi!'})
-          console.log(medal1)
-          console.log(medal1[0]._id)
           user.medals.push(medal1[0]._id)
-          console.log(user)
           break
         case 5:
           const medal5 = await Medal.find({name: 'Give me 5!'})
-          console.log(medal5)
-          console.log(medal5[0]._id)
-          user.medals.push(medal5[0]._id) 
-          console.log(user)          
-          break   
+          user.medals.push(medal5[0]._id)         
+          break
+        case 10:
+          const medal10 = await Medal.find({name: 'Give me 10!'})
+          user.medals.push(medal10[0]._id)        
+          break
+        case 25:
+          const medal25 = await Medal.find({name: 'Super Zombi!'})
+          user.medals.push(medal25[0]._id) 
+          break
+        case 50:
+          const medal50 = await Medal.find({name: 'Unstoppable Zombi!'})
+          user.medals.push(medal50[0]._id)     
+          break
+        case 100:
+          const medal100 = await Medal.find({name: 'Brain eater!'})
+          user.medals.push(medal100[0]._id)    
+          break      
       }
 
       user.percentage = Math.floor(user.correctQuestions.length / (user.correctQuestions.length + user.incorrectQuestions.length) * 100)

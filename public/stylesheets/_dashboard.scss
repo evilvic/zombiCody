@@ -48,26 +48,76 @@
 
 .dashboard-image {
   @include flex(flex, column, center, center);
-  img {
-    width: 30vw;
+  background-image: url('../images/identity/background2.png');
+  .white-image {
+    @include flex(flex, column, center, center);
+    margin: 20px 0;
+    background-color: white;
+    border: 5px solid $pink;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    img {
+      width: 150px;
+    }
   }
-  p, a {
-    color: $gray;
-    font-size: 2rem;
+}
+#profile-info {
+  @include flex(flex, column, center, center);
+  padding: 30px;
+  h2 {
+    color: $purple;
+    font-size: 3rem;
   }
   a {
-    margin-inline-start: 1vh;
-    margin-block-start: 1vh;
+    @include flex(flex, row, center, center);
+    background-color: $green;
+    color: $purple;
+    width: 120px;
+    height: 40px;
+    border: 3px solid $blue;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+}
+
+#title-achievements {
+  @include flex(flex, row, center, center);
+  h2 {
+    text-align: center;
+    color: $gray;
   }
 }
 
 .achievements {
   width: 100vw;
-  height: 50vh;
-  background-image: url('../images/identity/background2.png');
-  background-position: center;
-  background-repeat: repeat;
-  p {
-    font-size: 5rem;
+  @include flex(flex, row, center, center);
+  .super-medal {
+    width: 230px;
+    @include flex(flex, column, center, center);
+    background-color: rgba(255,255,255, 0.3);
+    border-radius: 5px;
+    padding: 20px;
+    img {
+      width: 100px;
+    }
+    h6 {
+      font-size: 2rem;
+      text-align: center;
+      padding: 5px;
+      height: 50px;
+      margin-top: 10px;
+      color: $gray;
+    
+    }
+    p {
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 5px;
+      height: 60px;
+      margin-bottom: 20px;
+      color: $gray;
+    }
   }
 }

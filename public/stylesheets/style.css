@@ -282,6 +282,66 @@ footer {
   #all-courses img {
     width: 90px; }
 
+#course-create-container, #question-create-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw; }
+  #course-create-container form, #question-create-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #course-create-container form h2, #question-create-container form h2 {
+      margin-bottom: 20px;
+      color: #a98bd5; }
+    #course-create-container form div, #question-create-container form div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left;
+      width: 70vw;
+      padding: 10px 0; }
+      #course-create-container form div label, #question-create-container form div label {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 3px; }
+      #course-create-container form div input, #course-create-container form div select, #question-create-container form div input, #question-create-container form div select {
+        width: 100%;
+        height: 50px;
+        border: 2px solid #ffcfe1;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        text-align: center;
+        background-color: white; }
+    #course-create-container form input[type="submit"], #question-create-container form input[type="submit"] {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-color: #96ffe2;
+      color: #a98bd5;
+      width: 70vw;
+      height: 50px;
+      border: 3px solid #76f3ff;
+      border-radius: 5px;
+      font-size: 1.5rem;
+      margin-top: 10px; }
+  #course-create-container a, #question-create-container a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffcfe1;
+    color: #a98bd5;
+    width: 70vw;
+    height: 50px;
+    border: 3px solid #a98bd5;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin-top: 10px; }
+
 .container-column {
   display: flex;
   flex-direction: column;
@@ -486,24 +546,85 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-image: url("../images/identity/background2.png"); }
+  .dashboard-image .white-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    background-color: white;
+    border: 5px solid #ffcfe1;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px; }
+    .dashboard-image .white-image img {
+      width: 150px; }
+
+#profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px; }
+  #profile-info h2 {
+    color: #a98bd5;
+    font-size: 3rem; }
+  #profile-info a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #96ffe2;
+    color: #a98bd5;
+    width: 120px;
+    height: 40px;
+    border: 3px solid #76f3ff;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-top: 10px; }
+
+#title-achievements {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center; }
-  .dashboard-image img {
-    width: 30vw; }
-  .dashboard-image p, .dashboard-image a {
-    color: #646464;
-    font-size: 2rem; }
-  .dashboard-image a {
-    margin-inline-start: 1vh;
-    margin-block-start: 1vh; }
+  #title-achievements h2 {
+    text-align: center;
+    color: #646464; }
 
 .achievements {
   width: 100vw;
-  height: 50vh;
-  background-image: url("../images/identity/background2.png");
-  background-position: center;
-  background-repeat: repeat; }
-  .achievements p {
-    font-size: 5rem; }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .achievements .super-medal {
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 20px; }
+    .achievements .super-medal img {
+      width: 100px; }
+    .achievements .super-medal h6 {
+      font-size: 2rem;
+      text-align: center;
+      padding: 5px;
+      height: 50px;
+      margin-top: 10px;
+      color: #646464; }
+    .achievements .super-medal p {
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 5px;
+      height: 60px;
+      margin-bottom: 20px;
+      color: #646464; }
 
 h1 {
   margin-inline-start: 5vw;
@@ -560,7 +681,7 @@ h1 {
   .delete form input {
     border: solid #201c1c; }
 
-#header-course {
+#header-course, #question-header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -569,22 +690,22 @@ h1 {
   height: 300px;
   background-color: #76f3ff;
   padding: 30px; }
-  #header-course div {
+  #header-course div, #question-header div {
     margin-right: 10px; }
-    #header-course div h2 {
+    #header-course div h2, #question-header div h2 {
       font-size: 2.5rem;
       text-align: left;
       margin: 0; }
-    #header-course div p {
+    #header-course div p, #question-header div p {
       font-size: 1.5rem;
       text-align: left;
       padding: 5px 0;
       margin: 3px 0; }
-      #header-course div p.course-code {
+      #header-course div p.course-code, #question-header div p.course-code {
         background-color: #ffffd8;
         text-align: center;
         width: 150px; }
-  #header-course img {
+  #header-course img, #question-header img {
     width: 90px; }
 
 #questions .circle {

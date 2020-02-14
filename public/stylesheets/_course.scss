@@ -1,4 +1,4 @@
-#header-course {
+#header-course, #question-header {
   @include flex(flex, row, space-around, center);
   width: 100vw;
   height: 300px;

@@ -7,14 +7,15 @@ exports.createCourseView = (req, res) => {
 
 exports.createCoursePost = async (req, res) => {
 
-  const { title, description } = req.body
+  const { title, description, courseCode } = req.body
 
   const { secure_url: image_URL } = req.file
 
   const newCourse = await Course.create({
     title, 
     description,
-    image_URL
+    image_URL,
+    courseCode
   })
 
   res.redirect(`/create/course/${newCourse._id}`)
