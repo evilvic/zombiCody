@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  console.log('IronGenerator JS imported successfully!');
   axios.get('/auth/getStatus').then(({data:{correctQuestions}}) => correctQuestions.forEach(element => {
-    console.log(element)
     document.getElementById(`${element}`).style.backgroundColor = "rgb(150, 255, 226)"
   }))
   axios.get('/auth/getStatus').then(request => {

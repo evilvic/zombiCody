@@ -17,7 +17,6 @@ exports.nav = (req, res, next) => {
 
 exports.isTeacher = (req, res, next) => {
   if (req.user.role === 'teacher') {
-    console.log('aqui si entra')
     next()
   } else {
     res.redirect('/')

@@ -626,60 +626,102 @@ footer {
       margin-bottom: 20px;
       color: #646464; }
 
-h1 {
-  margin-inline-start: 5vw;
-  margin-block-start: 2vh;
-  color: #a98bd5; }
-
-.avatar p {
-  color: #a98bd5;
-  margin-inline-start: 5vw;
-  margin-block-start: 2vh;
-  font-size: 2rem;
-  color: #646464; }
-
-.avatar form {
-  margin-block-end: 3vh;
-  margin-inline-start: 5vw;
-  margin-inline-end: 5vw; }
+.avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .avatar h2 {
+    margin-inline-start: 5vw;
+    margin-block-start: 2vh;
+    color: #a98bd5; }
+  .avatar p {
+    color: #a98bd5;
+    margin-inline-start: 5vw;
+    margin-block-start: 2vh;
+    font-size: 2rem;
+    color: #646464; }
+  .avatar form {
+    margin-block-end: 3vh;
+    margin-inline-start: 5vw;
+    margin-inline-end: 5vw; }
 
 .avatar-form {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap; }
   .avatar-form img {
     display: flex;
     flex-direction: column;
-    width: 18vw; }
+    width: 75px; }
   .avatar-form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-block-start: 4vh;
     margin-inline-end: 5vw;
-    border: solid #a98bd5;
-    background-image: url("/images/identity/background2.png"); }
+    border: 3px solid #a98bd5;
+    border-radius: 10px; }
   .avatar-form input[type="radio"] {
-    margin-inline-start: 9vw;
-    margin-block-end: 5vh;
-    font-size: 30px; }
+    font-size: 30px;
+    margin-bottom: 10px; }
+  .avatar-form button {
+    height: 100px;
+    width: 80px; }
 
 .delete {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  border: solid #a73535;
-  background-image: url("/images/identity/background.png");
-  width: 80vw;
+  align-items: center;
+  border: solid #cb2a1c;
+  width: 90vw;
   margin-inline-start: 5vw;
   margin-block-end: 5vh;
-  background-color: rgba(255, 0, 0, 0.1); }
+  background-color: #feaea7;
+  padding: 20px 10px; }
 
 .delete form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
   color: black;
   font-size: 2rem; }
   .delete form h2 {
-    margin-block-end: 2vh; }
+    margin-block-end: 2vh;
+    padding: 10px; }
   .delete form label {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    padding: 10px; }
+  .delete form p {
+    font-size: 1.2rem;
+    padding: 10px; }
   .delete form input {
-    border: solid #201c1c; }
+    width: 100%;
+    height: 50px;
+    border: 2px solid #ffcfe1;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: white; }
+  .delete form input[type=submit] {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #feaea7;
+    color: #cb2a1c;
+    width: 70vw;
+    height: 50px;
+    border: 3px solid #cb2a1c;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin-top: 10px; }
 
 #header-course, #question-header {
   display: flex;
